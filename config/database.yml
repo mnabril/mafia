@@ -13,7 +13,7 @@ development:
   database: db/assignment_dev
   pool: 5
   timeout: 5000
-  username: ray
+  username: marisa
   password: 
 
 # Warning: The database defined as "test" will be erased and
@@ -25,7 +25,7 @@ test:
   database: db/test
   pool: 5
   timeout: 5000
-  username: ray
+  username: marisa
   password:
 
 production:
@@ -34,5 +34,5 @@ production:
   database: db/production
   pool: 5
   timeout: 5000
-  username: ray
+  username: marisa
   password:
