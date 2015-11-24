@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+
+<title>Mafia</title>
+
+<link rel="stylesheet" type="text/css">
+
+<script src="//js.pusher.com/2.2/pusher.min.js"></script>
+<script>
+// If your Heroku application is within the EU region,
+// uncomment the followling lines
+// Pusher.host = 'ws-eu.pusher.com';
+// Pusher.sockjs_host = 'sockjs-eu.pusher.com';
+
+var pusher = new Pusher('<%= Pusher.key %>'); // uses your APP KEY
+var channel = pusher.subscribe('test_channel');
+channel.bind('greet', function(data) {
+  alert(data.greeting);
+});
+</script>
+
+</head>
+
+<body>
+
+<a href="login.html"><div class="logo"></div></a>
+
+<div class="login-block">
+    <h1>Welcome</h1>
+   <p>Welcome to Mafia Town, the turn-based multiplayer role-playing game about lies, deception, and betrayal. Similar to the card game of the same name or similar games such as Werewolves, mafia is a game in which two sides (Mafia and Townspeople) must seek each other out and eliminate one another. Will you survive?</p>
+</div>
+
+<div class="login-block">
+    <h1>Login to Play</h1>
+    <input type="text" value="" placeholder="Username" id="username" />
+    <input type="password" value="" placeholder="Password" id="password" />
+    <button>Play</button>
+   <p>Don't have an account? <a href="users/sign_up">Register here</a>.</p>
+</div>
+
+<div class="login-block">
+    <h1>Roles</h1>
+   <p>At the start of each round, each player is assigned a random role.<br>
+         <font color="red"><b><u>Mafia</b></u><br>Vote who to kill each night<br></font>
+         <font color="green"><b><u>Doctor</b></u><br>Choose someone to save each night<br></font>
+          <font color="blue"><b><u>Detective</b></u><br>Investigate someone each night<br></font>
+         <b><u>Townsperson</b></u><br>No night abilities, but can vote on suspected mafia during the day.</p></p>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<div class="chat-block">
+<%= form_for @chat_message, remote: true do |f| %>
+  <div style="display:none">
+    <%= hidden_field_tag :socket_id %>
+  </div>
+  <div class="chat_messages"></div>
+  <br><br>
+  <div>
+    <%= f.label :message %>
+    <%= f.text_area :message, rows: 3, cols: 40 %>
+  </div>
+
+  <div>
+    <%= f.submit 'Send' %>
+  </div>
+<% end %>
+
+</div>
