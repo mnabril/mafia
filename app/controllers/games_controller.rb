@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy]
-
+  attr_accessor :id
   # GET /games
   # GET /games.json
   def index
@@ -30,6 +30,7 @@ class GamesController < ApplicationController
       if @game.save
         format.html { redirect_to @game, notice: 'Game was successfully created.' }
         format.json { render :show, status: :created, location: @game }
+        @id = format.json {render :id}
       else
         format.html { render :new }
         format.json { render json: @game.errors, status: :unprocessable_entity }

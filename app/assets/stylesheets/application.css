@@ -137,3 +137,16 @@ a {
     text-align: left;
     overflow: auto;
 }
+.game-block {
+    width: 500px;
+    padding: 20px;
+    background: #ABABAB;
+    border-radius: 5px;
+    border-top: 5px solid #CC0000;
+    margin: 0px 20px 0px 20px;
+    display: inline-block;
+}
+.list-of-games {
+    font-size: 14px;
+    font-family: Montserrat;
+}

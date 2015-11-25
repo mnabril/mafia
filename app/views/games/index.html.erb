@@ -1,25 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Games</h1>
-
+<div class="game-block">
+<h1>Lobby</h1>
 <table>
   <thead>
     <tr>
       <th colspan="3"></th>
     </tr>
   </thead>
-
-  <tbody>
+  <div class="list-of-games">
     <% @games.each do |game| %>
       <tr>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>Game Room #<%= game.id %></td>
+        <!--<td><%= link_to 'Show', game %></td>-->
+        <td>  Number of players: 0<!--insert num_of_players dynamically later -->/8</td>
+        <td>  <%= link_to 'Show', game %></td>
+
+        <!-- <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
-  </tbody>
 </table>
+
 
 <br>
 
 <%= link_to 'New Game', new_game_path %>
+
+</div>
+</div>
