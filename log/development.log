@@ -9860,222 +9860,29 @@ Processing by ChatMessagesController#create as JS
 Completed 200 OK in 299ms (Views: 6.8ms | ActiveRecord: 1.8ms)
 
 
-Started GET "/" for 127.0.0.1 at 2015-11-24 15:00:13 -0800
-  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by Devise::SessionsController#new as HTML
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.4ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (83.5ms)
-Completed 200 OK in 353ms (Views: 328.7ms | ActiveRecord: 3.3ms)
-
-
-Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2015-11-24 15:00:14 -0800
-
-
-Started POST "/users/sign_in" for 127.0.0.1 at 2015-11-24 15:00:16 -0800
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h2TSbhmdWS/yHELeDlswD6QSnAsFlZjf0Yg/OpCe/VN/L6kcz2xipcI9dj+04P4MArjBAjqj6jQ5GnhDj5JDLA==", "user"=>{"email"=>"marisa@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "marisa@test.com"]]
-  [1m[36m (5.7ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-11-24 22:49:09.711376"], ["current_sign_in_at", "2015-11-24 23:00:16.565207"], ["sign_in_count", 36], ["updated_at", "2015-11-24 23:00:16.572462"], ["id", 3]]
-  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
-Redirected to http://localhost:3000/
-Completed 302 Found in 323ms (ActiveRecord: 8.5ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-11-24 15:00:16 -0800
-  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Started GET "/" for 127.0.0.1 at 2015-11-24 15:32:02 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
 Processing by GamesController#index as HTML
-  [1m[36mGame Load (3.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
-  Rendered games/index.html.erb within layouts/application (11.3ms)
-Completed 200 OK in 45ms (Views: 31.8ms | ActiveRecord: 4.6ms)
+  [1m[36mGame Load (1.7ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 472ms (Views: 466.5ms | ActiveRecord: 2.7ms)
 
 
-Started GET "/chat_messages" for 127.0.0.1 at 2015-11-24 15:00:19 -0800
+Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2015-11-24 15:32:02 -0800
+
+
+Started GET "/chat_messages" for 127.0.0.1 at 2015-11-24 15:32:05 -0800
 Processing by ChatMessagesController#index as HTML
-  Rendered chat_messages/index.html.erb within layouts/application (343.4ms)
-  [1m[35mUser Load (5.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
-Completed 200 OK in 363ms (Views: 351.4ms | ActiveRecord: 5.2ms)
+  Rendered chat_messages/index.html.erb within layouts/application (382.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 409ms (Views: 402.9ms | ActiveRecord: 0.3ms)
 
 
-Started GET "/" for 127.0.0.1 at 2015-11-24 15:00:34 -0800
-Processing by Devise::SessionsController#new as HTML
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (2.9ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (17.1ms)
-Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2015-11-24 15:00:34 -0800
-
-
-Started POST "/users/sign_in" for 127.0.0.1 at 2015-11-24 15:00:36 -0800
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/GuVHlfsJKoBIkOCe117Pl0i7xoRbIASL8C/5u4+IhXYZ4KCSEgvw0LAStlCq5qMjOU5YHl0gws/Zpp1Qsryqg==", "user"=>{"email"=>"qwe@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "qwe@test.com"]]
-  [1m[35m (0.6ms)[0m  BEGIN
-  [1m[36mSQL (4.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-11-24 22:49:50.189796"], ["current_sign_in_at", "2015-11-24 23:00:36.251530"], ["sign_in_count", 20], ["updated_at", "2015-11-24 23:00:36.257294"], ["id", 1]]
-  [1m[35m (14.5ms)[0m  COMMIT
-Redirected to http://localhost:3000/
-Completed 302 Found in 226ms (ActiveRecord: 22.6ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-11-24 15:00:36 -0800
-  [1m[36mUser Load (6.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
-Processing by GamesController#index as HTML
-  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games"
-  Rendered games/index.html.erb within layouts/application (8.0ms)
-Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2015-11-24 15:00:36 -0800
-
-
-Started GET "/chat_messages" for 127.0.0.1 at 2015-11-24 15:00:37 -0800
-Processing by ChatMessagesController#index as HTML
-  Rendered chat_messages/index.html.erb within layouts/application (87.0ms)
-  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
-Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2015-11-24 15:00:38 -0800
-
-
-Started POST "/chat_messages" for 127.0.0.1 at 2015-11-24 15:00:42 -0800
+Started POST "/chat_messages" for 127.0.0.1 at 2015-11-24 15:32:11 -0800
 Processing by ChatMessagesController#create as JS
-  Parameters: {"utf8"=>"✓", "socket_id"=>"113618.6177397", "chat_message"=>{"message"=>"helllo"}, "commit"=>"Send"}
-  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
-  Rendered chat_messages/_chat_message.html.erb (4.6ms)
-  Rendered chat_messages/create.js.erb (6.2ms)
-Completed 200 OK in 421ms (Views: 12.7ms | ActiveRecord: 0.3ms)
-
-
-Started POST "/chat_messages" for 127.0.0.1 at 2015-11-24 15:00:47 -0800
-Processing by ChatMessagesController#create as JS
-  Parameters: {"utf8"=>"✓", "socket_id"=>"113615.6183338", "chat_message"=>{"message"=>"hey"}, "commit"=>"Send"}
-  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
-  Rendered chat_messages/_chat_message.html.erb (0.1ms)
-  Rendered chat_messages/create.js.erb (1.0ms)
-Completed 200 OK in 116ms (Views: 3.4ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-11-24 15:11:11 -0800
-
-PG::ConnectionBad (FATAL:  Peer authentication failed for user "ray"
-):
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `initialize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `new'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `connect'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
-
-
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-11-24 15:11:12 -0800
-
-PG::ConnectionBad (FATAL:  Peer authentication failed for user "ray"
-):
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `initialize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `new'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `connect'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
-  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
-  /home/marisa/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
-
-
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.5ms)
+  Parameters: {"utf8"=>"✓", "socket_id"=>"113755.6010630", "chat_message"=>{"message"=>"hi"}, "commit"=>"Send"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered chat_messages/_chat_message.html.erb (0.8ms)
+  Rendered chat_messages/create.js.erb (6.7ms)
+Completed 200 OK in 452ms (Views: 11.4ms | ActiveRecord: 0.4ms)

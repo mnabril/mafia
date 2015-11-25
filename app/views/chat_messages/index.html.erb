@@ -1,9 +1,4 @@
-<head>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script src="http://js.pusher.com/2.0/pusher.min.js"></script>
-</head>
-
-<body><div class="chat-block">
+<div class="chat-block">
 <%= form_for @chat_message, remote: true do |f| %>
   <div style="display:none">
     <%= hidden_field_tag :socket_id %>
@@ -21,7 +16,3 @@
 <% end %>
 
 </div>
-
-<%= pusher_include_tag '2.2' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-</body>
