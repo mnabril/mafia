@@ -2,6 +2,7 @@ class ChatMessagesController < ApplicationController
   
   def index
     @chat_message = ChatMessage.new
+    @id = params[:id]
   end
 
   def create

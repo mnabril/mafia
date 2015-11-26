@@ -1,11 +1,9 @@
 ;(function ($) {
-
   var pusher = new Pusher('<%= Pusher.key %>');
   var channel = pusher.subscribe('chat');
 
 pusher.connection.bind('connected', function () {
   var socket_id = pusher.connection.socket_id;
-
   $('#socket_id').val(socket_id);
 });
 channel.bind('new_message', function (data) {
