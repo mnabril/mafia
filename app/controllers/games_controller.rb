@@ -5,11 +5,13 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @games = Game.all
+    @chat_message = ChatMessage.new
   end
 
   # GET /games/1
   # GET /games/1.json
   def show
+    @chat_message = ChatMessage.new
   end
 
   # GET /games/new

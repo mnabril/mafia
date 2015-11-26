@@ -3,8 +3,8 @@
   <script src="http://js.pusher.com/2.0/pusher.min.js"></script>
 </head>
 <body>
-<div class="chat-block">
-<%= form_for @chat_message, remote: true do |f| %>
+
+<%= form_for chat_message, remote: true do |f| %>
   <div style="display:none">
     <%= hidden_field_tag :socket_id %>
   </div>
@@ -12,15 +12,12 @@
   <br><br>
   <div>
     <%= f.label :message %>
-    <%= f.text_area :message, rows: 3, cols: 40 %>
+    <%= f.text_field :message, :size=> "50", placeholder: "Hit enter to send" %>
   </div>
 
   <div>
-    <%= f.submit 'Send' %>
   </div>
 <% end %>
-
-</div>
 <%= pusher_include_tag '2.2' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 

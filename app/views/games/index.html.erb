@@ -12,7 +12,6 @@
     <% @games.each do |game| %>
       <tr>
         <td>Game Room #<%= game.id %></td>
-        <!--<td><%= link_to 'Show', game %></td>-->
         <td>  Number of players: 0<!--insert num_of_players dynamically later -->/8</td>
         <td>  <%= link_to 'Show', game %></td>
 
@@ -25,7 +24,11 @@
 
 <br>
 
-<%= link_to 'New Game', new_game_path %>
+<!--<%= link_to 'New Game', new_game_path %> -->
 
 </div>
+</div>
+<div class="chat-block">
+Global Chat
+<%= render :partial => 'chat_messages/index', :locals =>{:chat_message => @chat_message} %>
 </div>

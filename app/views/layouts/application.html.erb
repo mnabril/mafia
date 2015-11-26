@@ -6,7 +6,6 @@
   <%= csrf_meta_tags %>
 
   <p class="navbar-text pull-right">
-    <%= link_to "Chat", chat_messages_path, :class => 'navbar-link'  %>
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
     <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
