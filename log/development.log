@@ -14558,3 +14558,58 @@ Processing by ChatMessagesController#create as JS
   Rendered chat_messages/_chat_message.html.erb (0.1ms)
   Rendered chat_messages/create.js.erb (1.8ms)
 Completed 200 OK in 273ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-25 20:45:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /home/marisa/.rvm/gems/ruby-2.0.0-p643/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (151.4ms)
+Completed 200 OK in 1081ms (Views: 1041.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/scaffolds.self-e4c3d01c81c038bb33c733888fbd5127bb893fd631ae0c8c1ceea9d48c130b22.css?body=1" for 127.0.0.1 at 2015-11-25 20:45:36 -0800
+
+
+Started GET "/assets/welcome.self-790017cdb1b280243360edc779de778381d626f9e66ba2729fdaa426bf18aa50.css?body=1" for 127.0.0.1 at 2015-11-25 20:45:36 -0800
+
+
+Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2015-11-25 20:45:36 -0800
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-11-25 20:45:39 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0u5TEGHTcJe361xAnAMbIhVN1YCUEbVf7Iar/QJDPQ6x9tBaWmVZJzYnQc8ABS+qhB/qUAzSjxUQqQg8d7Ls/g==", "user"=>{"email"=>"marisa@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (98.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "marisa@test.com"]]
+  [1m[36m (5.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-11-26 03:13:06.547928"], ["current_sign_in_at", "2015-11-26 04:45:39.485623"], ["sign_in_count", 52], ["updated_at", "2015-11-26 04:45:39.492324"], ["id", 3]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 358ms (ActiveRecord: 106.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-25 20:45:39 -0800
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (5.4ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered chat_messages/_index.html.erb (1207.5ms)
+  Rendered games/index.html.erb within layouts/application (1240.7ms)
+Completed 200 OK in 1318ms (Views: 1288.0ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/chat_messages" for 127.0.0.1 at 2015-11-25 20:45:44 -0800
+Processing by ChatMessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "socket_id"=>"122051.301259", "chat_message"=>{"message"=>"hi"}}
+  [1m[35mUser Load (5.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered chat_messages/_chat_message.html.erb (0.6ms)
+  Rendered chat_messages/create.js.erb (7.6ms)
+Completed 200 OK in 566ms (Views: 117.2ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/chat_messages" for 127.0.0.1 at 2015-11-25 20:45:51 -0800
+Processing by ChatMessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "socket_id"=>"122051.301259", "chat_message"=>{"message"=>"test"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered chat_messages/_chat_message.html.erb (0.1ms)
+  Rendered chat_messages/create.js.erb (5.4ms)
+Completed 200 OK in 114ms (Views: 9.7ms | ActiveRecord: 1.3ms)
