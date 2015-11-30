@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   #root 'chat_messages#index'
   resources :chat_messages, only: [:create]
   get '/chat_messages/' => 'chat_messages#index'
-
+  #get '/welcome/' => 'welcome#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

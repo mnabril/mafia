@@ -1,14 +1,18 @@
 ;(function ($) {
   var pusher = new Pusher('<%= Pusher.key %>');
-  var channel = pusher.subscribe('chat');
+  var x = document.getElementById("chat");
+  alert(x.innerHTML);
+  var channel = pusher.subscribe(x.innerHTML);
 
 pusher.connection.bind('connected', function () {
   var socket_id = pusher.connection.socket_id;
   $('#socket_id').val(socket_id);
 });
+
 channel.bind('new_message', function (data) {
     // Code smell - Duplicated view
     // It's exactly app/views/chat_messages/_chat_message.html
     $('.chat_messages').append(data.name + ': ' + data.message + '<br>');
   });
 }(jQuery));
+

@@ -1,7 +1,14 @@
+<head>
+	<script>
+	</script>
+</head>
+<body>
 <p id="notice"><%= notice %></p>
 <div class="chat-block">
 Game Chat
-<%= render :partial => 'chat_messages/index', :gameID => @game.id, :locals =>{:chat_message => @chat_message} %>
-</div>
+<%= render :partial => 'chat_messages/index', :locals =>{:chat_message => @chat_message, :game_id => params[:id]} %>
+
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
+</div>
+</body>

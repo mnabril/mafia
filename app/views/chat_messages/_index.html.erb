@@ -1,12 +1,15 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script src="http://js.pusher.com/2.0/pusher.min.js"></script>
+  <script>
+</script>
 </head>
 <body>
-
+<div id="chat"><%= game_id %></div>
 <%= form_for chat_message, remote: true do |f| %>
   <div style="display:none">
     <%= hidden_field_tag :socket_id %>
+    <%= hidden_field_tag :channel, game_id %>
   </div>
   <div class="chat_messages"></div>
   <br><br>
@@ -14,11 +17,6 @@
     <%= f.label :message %>
     <%= f.text_field :message, :size=> "50", placeholder: "Hit enter to send" %>
   </div>
-
-  <div>
-  </div>
 <% end %>
-<%= pusher_include_tag '2.2' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
 </body>
+</html>

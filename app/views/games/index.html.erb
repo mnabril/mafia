@@ -1,3 +1,8 @@
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="http://js.pusher.com/2.0/pusher.min.js"></script>
+  </head>
+  <body>
 <p id="notice"><%= notice %></p>
 
 <div class="game-block">
@@ -13,7 +18,7 @@
       <tr>
         <td>Game Room #<%= game.id %></td>
         <td>  Number of players: 0<!--insert num_of_players dynamically later -->/8</td>
-        <td>  <%= link_to 'Show', game %></td>
+        <td><%= link_to 'Show', game %></td>
 
         <!-- <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
@@ -28,7 +33,11 @@
 
 </div>
 </div>
+
 <div class="chat-block">
 Global Chat
-<%= render :partial => 'chat_messages/index', :locals =>{:chat_message => @chat_message} %>
+<%= render :partial => 'chat_messages/index', :locals =>{:chat_message => @chat_message, :game_id => '0'} %>
 </div>
+<%= pusher_include_tag '2.2' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
